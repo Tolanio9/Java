@@ -250,3 +250,27 @@ plt.grid(True)
 plt.show()
 
 #Image Enhancement and compression
+import cv2
+
+img = cv2.imread('input.jpg')
+
+if img is None:
+    print("Error: Image not found!")
+    exit()
+
+bright_img = cv2.convertScaleAbs(img, beta=50)
+
+gray = cv2.cvtColor(bright_img, cv2.COLOR_BGR2GRAY)
+
+contrast_img = cv2.normalize(gray, None, 0, 255, cv2.NORM_MINMAX)
+
+cv2.imwrite('compressed.jpg', contrast_img, [cv2.IMWRITE_JPEG_QUALITY, 50])
+
+cv2.imshow("Original Image", img)
+cv2.imshow("Bright Image", bright_img)
+cv2.imshow("Contrast Image", contrast_img)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+print("Brightness, Contrast and Compression done")
