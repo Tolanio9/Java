@@ -1,0 +1,20 @@
+import matplotlib.pyplot as plt
+
+plt.axhline(0, color='black')
+plt.axvline(0, color='black')
+
+plt.scatter(100, 0, marker='>', color='black')
+plt.scatter(0, 100, marker='^', color='black')
+
+plt.text(95, -5, 'x')
+plt.text(5, 95, 'y')
+
+plt.xlim(-100, 100)
+plt.ylim(-100, 100)
+
+plt.gca().set_aspect('equal')
+
+plt.xticks([])
+plt.yticks([])
+
+plt.show()
