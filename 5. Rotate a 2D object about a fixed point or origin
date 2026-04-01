@@ -1,0 +1,29 @@
+import math
+import matplotlib.pyplot as plt
+
+triangle = [(1,1), (3,1), (2,3)]
+
+angle = 90
+r = math.radians(angle)
+
+rotated = []
+
+for x, y in triangle:
+    x_new = x * math.cos(r) - y * math.sin(r)
+    y_new = x * math.sin(r) + y * math.cos(r)
+    rotated.append((round(x_new, 2), round(y_new, 2)))
+
+print("Original:", triangle)
+print("Rotated:", rotated)
+
+x_orig, y_orig = zip(*(triangle + [triangle[0]]))
+x_rot, y_rot = zip(*(rotated + [rotated[0]]))
+
+plt.plot(x_orig, y_orig, marker='o', label="Original")
+plt.plot(x_rot, y_rot, marker='o', label="Rotated")
+
+plt.axhline(0)
+plt.axvline(0)
+plt.grid()
+plt.legend()
+plt.show()
