@@ -1,1 +1,25 @@
-#
+#Circle ,Rectangle, polygon
+import matplotlib.pyplot as plt
+from matplotlib.patches import Circle, Rectangle, Polygon
+
+plt.figure()
+
+plt.plot([1, 4], [1, 4])
+
+circle = Circle((2, 6), 1, color='red', alpha=0.6)
+plt.gca().add_patch(circle)
+
+rectangle = Rectangle((5, 2), 3, 2, color='green', alpha=0.6)
+plt.gca().add_patch(rectangle)
+
+polygon = Polygon([[6, 6], [7, 8], [9, 7], [8, 6]], color='blue', alpha=0.6)
+plt.gca().add_patch(polygon)
+
+plt.xlim(0, 10)
+plt.ylim(0, 10)
+plt.gca().set_aspect('equal')
+plt.grid()
+
+plt.show()
+
+#Coordinate Axis at the center of the screen
