@@ -1,0 +1,22 @@
+import matplotlib.pyplot as plt
+
+surfaces = [
+    ([1,4,4,1], [1,1,4,4], 30, "Surface A (Far)"),
+    ([2,5,5,2], [2,2,5,5], 20, "Surface B"),
+    ([3,6,6,3], [3,3,6,6], 10, "Surface C (Near)")
+]
+
+surfaces.sort(key=lambda s: s[2], reverse=True)
+
+plt.figure()
+
+for s in surfaces:
+    x, y, z, label = s
+    plt.fill(x, y, alpha=0.6, label=label)
+
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.title("Painter's Algorithm (Simple Plot)")
+plt.legend()
+plt.grid(True)
+plt.show()
