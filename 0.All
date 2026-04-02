@@ -1,4 +1,5 @@
-#Circle ,Rectangle, polygon
+1 #Circle ,Rectangle, polygon
+
 import matplotlib.pyplot as plt
 from matplotlib.patches import Circle, Rectangle, Polygon
 
@@ -22,7 +23,7 @@ plt.grid()
 
 plt.show()
 
-#Coordinate Axis at the center of the screen
+2#Coordinate Axis at the center of the screen
 
 import matplotlib.pyplot as plt
 
@@ -45,7 +46,7 @@ plt.yticks([])
 
 plt.show()
 
-#Implement the DDA
+3#Implement the DDA
 
 import matplotlib.pyplot as plt
 
@@ -79,7 +80,7 @@ def dda(x1, y1, x2, y2):
 
 dda(2, 3, 10, 7)
 
-#Implement the midpoint circle algorithm
+4#Implement the midpoint circle algorithm
 
 import matplotlib.pyplot as plt
 
@@ -108,7 +109,7 @@ plt.gca().set_aspect('equal')
 plt.title("Midpoint Circle Algorithm (r=8)")
 plt.show()
 
-# Rotate a 2D object about a fixed point or origin
+5# Rotate a 2D object about a fixed point or origin
 
 import math
 import matplotlib.pyplot as plt
@@ -140,7 +141,7 @@ plt.grid()
 plt.legend()
 plt.show()
 
-# reflect a 2d object across x-axis,y-axis and diagonal
+6# reflect a 2d object across x-axis,y-axis and diagonal
 
 import matplotlib.pyplot as plt
 
@@ -180,7 +181,7 @@ plt.title('2D Object Reflection')
 
 plt.show()
 
-#Painter Algorithm
+7#Painter Algorithm
 
 import matplotlib.pyplot as plt
 
@@ -205,7 +206,7 @@ plt.legend()
 plt.grid(True)
 plt.show()
 
-#Back face removal algorithm
+8#Back face removal algorithm
 
 import matplotlib.pyplot as plt
 
@@ -229,7 +230,7 @@ plt.grid(True)
 
 plt.show()
 
-# Scan Line fill Algorithm
+9# Scan Line fill Algorithm
 
 import matplotlib.pyplot as plt
 
@@ -249,7 +250,7 @@ plt.title("Scan-Line Fill Algorithm")
 plt.grid(True)
 plt.show()
 
-#Image Enhancement and compression
+10 #Image Enhancement and compression
 import cv2
 
 img = cv2.imread('input.jpg')
